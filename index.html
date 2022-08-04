@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+
+    /* style start */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-transform: capitalize;
+
+    }
+
+    body {
+      
+        background-image: linear-gradient(to right top, #2e4668, #006b87, #008f90, #57af83, #afc974);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+     
+        
+       
+    }
+
+    form {
+        width: 380px;
+        height: 500px;
+        box-shadow: 0 0 10px 0px grey;
+        
+        
+    }
+
+    #mycalc {
+        width: inherit;
+        font-size: 1.3rem;
+        background-color: #303030;
+        color: white;
+        outline: none;
+
+
+        padding: .5rem 0rem;
+        border: none;
+        padding: .3rem;
+
+
+    }
+
+    #answer {
+        width: inherit;
+        padding: .5rem 0rem;
+        background-color: #303030;
+        font-size: 3rem;
+        outline: none;
+        border: none;
+        text-align: right;
+        height: 60px;
+    }
+
+    .layer1 {
+        width: inherit;
+        display: flex;
+        justify-content: center;
+
+
+        height: 5.88rem;
+
+    }
+
+    .layer2 {
+        cursor: pointer;
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        height: 30px;
+
+    }
+
+    input {
+        flex: 1;
+        font-size: 1.2rem;
+        color: white;
+        border: 1px solid #504f4f;
+        
+        outline: none;
+    }
+
+    .main-num {
+        background-color: #101011;
+
+    }
+    .other{
+        background-color: #303030;
+    }
+    input:hover{
+        background-color: #474747;
+        border: 1px solid grey;
+    }
+    /* style end */
+</style>
+
+<body>
+    <div class="container">
+        <form name="calcy">
+
+
+            <input type="text" name="mycalc" id="mycalc" value="calculator">
+            
+            <!-- this button show the value press by the user in calculator -->
+            <input type="text" name="answer" value="" id="answer">
+
+            <div class="layer2 ">
+                <input type="button" value="c" onclick="calcy.answer.value=''" class="other">
+                
+                <!-- this input button show the output when the user will click = sign -->
+                <input type="button" value="=" onclick="calcy.answer.value=eval(calcy.answer.value)" class="other">
+            </div>
+            <div class="layer1">
+
+                <!-- onclick function display the number press by the user -->
+
+
+                <input type="button" value="7" onclick="calcy.answer.value +='7'" class="main-num">
+                <input type="button" value="8" onclick="calcy.answer.value +='8'" class="main-num">
+                <input type="button" value="9" onclick="calcy.answer.value +='9'" class="main-num">
+                <input type="button" value="*" onclick="calcy.answer.value +='*'" class="other center">
+            </div>
+
+            <div class="layer1">
+                <input type="button" name="" id="" value="4" onclick="calcy.answer.value+= '4'" class="main-num">
+                <input type="button" name="" id="" value="5" onclick="calcy.answer.value+='5'" class="main-num">
+                <input type="button" name="" id="" value="6" onclick="calcy.answer.value+='6'" class="main-num">
+                <input type="button" name="" id="" value="-" onclick="calcy.answer.value+='-'" class="other">
+            </div>
+            <div class="layer1">
+                <input type="button" name="" id="" value="1" onclick="calcy.answer.value+= '1'" class="main-num">
+                <input type="button" name="" id="" value="2" onclick="calcy.answer.value+='2'" class="main-num">
+                <input type="button" name="" id="" value="3" onclick="calcy.answer.value+='3'" class="main-num">
+                <input type="button" name="" id="" value="+" onclick="calcy.answer.value+='+'" class="other">
+            </div>
+            <div class="layer1">
+                <input type="button" name="" id="" value="." onclick="calcy.answer.value+= '.'" class="other">
+                <input type="button" name="" id="" value="0" onclick="calcy.answer.value+='0'" class="main-num">
+                <input type="button" name="" id="" value="%" onclick="calcy.answer.value+='%'" class="other">
+                <input type="button" name="" id="" value="/" onclick="calcy.answer.value+='/'" class="other">
+            </div>
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
